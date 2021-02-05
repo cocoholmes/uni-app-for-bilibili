@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/categoryPage/categoryPage",
+    "pages/myZone/myZone",
+    "pages/login/login"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "不是📺哔哩哔哩🎬",
+    "navigationBarBackgroundColor": "#cfb56a",
+    "backgroundColor": "#F7F7F7"
+  },
+  "tabBar": {
+    "color": "#757575",
+    "selectedColor": "#fc7299",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/images/indexBar.png",
+        "selectedIconPath": "/static/images/indexBar111.png"
+      },
+      {
+        "pagePath": "pages/categoryPage/categoryPage",
+        "text": "分区",
+        "iconPath": "/static/images/cateBar.png",
+        "selectedIconPath": "/static/images/cateBar111.png"
+      },
+      {
+        "pagePath": "pages/myZone/myZone",
+        "text": "我的",
+        "iconPath": "/static/images/myZone.png",
+        "selectedIconPath": "/static/images/myZone111.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

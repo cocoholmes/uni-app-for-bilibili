@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "popular": "/components/Popular/Popular",
+    "cartoon": "/components/Cartoon/Cartoon"
+  }
+}
