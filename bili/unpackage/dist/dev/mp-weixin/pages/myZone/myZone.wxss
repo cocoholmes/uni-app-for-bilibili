@@ -1,6 +1,6 @@
 .myContainer {
-  height: 100%;
   width: 750rpx;
+  height: 100%;
 }
 .myContainer .unLogin {
   width: 100%;
@@ -16,5 +16,75 @@
   border-radius: 50%;
   width: 150rpx;
   height: 150rpx;
+}
+.myContainer .unLogin .userInfo text {
+  background-color: #fb7299;
+  border-radius: 30rpx;
+  padding: 20rpx;
+  color: #eee;
+  border: 1rpx solid #fff;
+}
+.myContainer .historyContent {
+  padding-left: 15rpx;
+  width: 750rpx;
+  height: 320rpx;
+  border-top: 1rpx solid #e7e7e7;
+}
+.myContainer .historyContent .historyTitle {
+  margin: 0 15rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.myContainer .historyContent .historyInfo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 300rpx;
+}
+.myContainer .historyContent .historyInfo .scrollItem {
+  margin-right: 10rpx;
+  height: 260rpx;
+  width: 200rpx;
+}
+.myContainer .historyContent .historyInfo .scrollItem image {
+  width: 200rpx;
+  height: 230rpx;
+  border-radius: 20rpx;
+  background-size: cover;
+}
+.myContainer .historyContent .historyInfo .scrollItem text {
+  font-size: 26rpx;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.myContainer .feedback {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  width: 750rpx;
+  height: 100rpx;
+  margin-top: 10rpx;
+  border-top: 1rpx solid #e7e7e7;
+  border-bottom: 1rpx solid #e7e7e7;
 }
 

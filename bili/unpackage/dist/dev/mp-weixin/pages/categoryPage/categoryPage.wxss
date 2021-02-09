@@ -1,28 +1,77 @@
-.categoryContainer {
+.categoryContainer .header {
+  padding: 10rpx 0;
+}
+.categoryContainer .header .search {
+  width: 92%;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  background: #eee;
+  margin: 0 auto;
+}
+.categoryContainer .contentContainer {
+  height: calc(100vh - 80rpx);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  border-top: 1rpx solid #eee;
+  box-sizing: border-box;
+}
+.categoryContainer .contentContainer .leftContainer {
+  width: 20%;
+  height: 100%;
+  border-right: 1rpx solid #eee;
+  box-sizing: border-box;
+}
+.categoryContainer .contentContainer .leftContainer .navScroll {
+  height: calc(100vh - 82rpx);
+}
+.categoryContainer .contentContainer .leftContainer .navScroll .navItem {
+  position: relative;
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.categoryContainer .contentContainer .leftContainer .navScroll .navItem.active:before {
+  position: absolute;
+  top: 10rpx;
+  left: 6rpx;
+  content: '';
+  width: 2rpx;
+  height: 60rpx;
+  background: #bb2c08;
+}
+.categoryContainer .contentContainer .rightContainer {
+  width: 80%;
+  height: 100%;
+}
+.categoryContainer .contentContainer .rightContainer .shopScroll {
+  height: calc(100vh - 82rpx);
+}
+.categoryContainer .contentContainer .rightContainer .shopScroll .cateImg {
+  width: 520rpx;
+  height: 190rpx;
+  display: block;
+  margin: 10rpx auto;
+}
+.categoryContainer .contentContainer .rightContainer .shopScroll .shopList {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
 }
-.categoryContainer .content {
-  width: 25%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+.categoryContainer .contentContainer .rightContainer .shopScroll .shopList .shopItem {
+  width: 33.333%;
+  text-align: center;
 }
-.categoryContainer .content .iconfont {
-  font-size: 100rpx;
+.categoryContainer .contentContainer .rightContainer .shopScroll .shopList .shopItem .shopImg {
+  height: 144rpx;
+  width: 90%;
+}
+.categoryContainer .contentContainer .rightContainer .shopScroll .shopList .shopItem .shopName {
+  font-size: 24rpx;
 }
 

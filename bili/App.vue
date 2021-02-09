@@ -8,6 +8,13 @@
 		},
 		onHide: function() {
 			console.log('App Hide')
+		},
+		onShareAppMessage() {
+			  return{
+			    title:"这是自定义的内容",
+			    path:'这是转发的路径',
+			    imageUrl:'这是转发的路径'
+			  }
 		}
 	}
 </script>

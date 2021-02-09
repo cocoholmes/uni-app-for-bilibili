@@ -33,6 +33,18 @@ const jwt = require('jsonwebtoken');
 		ctx.body = cartoonData
 	})
 	
+	// 注册时间线索引的番剧
+	const timeCartoon = require('../datas/timeline.json')
+	router.get('/getTimeline',(ctx)=>{
+		ctx.body = timeCartoon
+	})
+	
+	// 注册分类页面的realCategory
+	const realCategory = require('../datas/realCategory.json')
+	router.get('/getRealCategory',(ctx)=>{
+		ctx.body = realCategory
+	})
+	
 	// 获取用户唯一标识 openId
 	router.get('/getOpenId',async(ctx)=>{
 			 // 1 接收请求参数

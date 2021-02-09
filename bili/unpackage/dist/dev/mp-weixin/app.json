@@ -3,14 +3,14 @@
     "pages/index/index",
     "pages/categoryPage/categoryPage",
     "pages/myZone/myZone",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/detail/detail"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "不是📺哔哩哔哩🎬",
-    "navigationBarBackgroundColor": "#cfb56a",
-    "backgroundColor": "#F7F7F7"
+    "navigationBarBackgroundColor": "#cfb56a"
   },
   "tabBar": {
     "color": "#757575",

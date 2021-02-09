@@ -1,1 +1,1 @@
-<view class="cartoonContainer">cartoon</view>
+<view class="cartoonContainer"><scroll-view class="scrollView" scroll-y="true"><view class="fanju"><block wx:for="{{timeCate}}" wx:for-item="seasonInfo" wx:for-index="index" wx:key="date_ts"><view class="mainContainer"><block wx:for="{{seasonInfo.seasons}}" wx:for-item="seasonItem" wx:for-index="index" wx:key="season_id"><view class="season"><image src="{{seasonItem.square_cover}}" mode></image><text>{{seasonItem.title}}</text><text>{{"最新话:"+seasonItem.pub_index}}</text></view></block></view></block></view></scroll-view></view>

@@ -2,7 +2,7 @@
 	<view class="popularContainer">
 		<scroll-view scroll-y="true" enable-flex class="videoScorll">
 			<view class="videoContainer" v-for="(videoItem,index) in videoInfo" :key="videoItem.aid">
-				<view class="video">
+				<view class="video" @click="toDetail(videoItem)">
 					<image class="poster" :src="videoItem.pic" mode=""></image>
 					<text >{{ videoItem.duration | formatDuration}}</text>
 				</view>
@@ -22,6 +22,7 @@
 						<text>{{videoItem.stat.view | formatNumber}}</text>
 						<text class="iconfont icon-pinglun"></text>
 						<text>{{videoItem.stat.reply}}</text>
+						<text class="iconfont icon-59fenxiang"></text>
 					</view>
 				</view>
 			</view>
@@ -42,15 +43,25 @@
 			this.getPopularData()
 		},
 		methods:{
+				// 发请求 获取 热门视频列表
 			async getPopularData(){
 				let result = await request('/getPopularData')
 				// console.log('result',result)
 				this.videoInfo = result.data.list 
 				console.log(this.videoInfo)
+			},
+			// 跳转到详情页 带上详情数据
+			toDetail(videoItem){
+				uni.navigateTo({
+					url:'../../pages/detail/detail?videoItem=' +JSON.stringify(videoItem),
+					animationType: 'pop-in',
+					animationDuration: 200
+				})
 			}
 		},
 		
 		// 使用过滤器 管道符 手写算法 实现播放时长 和 播放量的格式化
+		// 还有全局管道符  已记录在笔记
 		filters: {
 			formatDuration: function(time) {
 				//计算分钟
@@ -123,30 +134,37 @@
 				.videoTitle
 					position absolute
 					top 15rpx
-					font-size: 28rpx;
-					display: block;
-				    text-overflow: ellipsis;
-				    display: -webkit-box;
-				    -webkit-line-clamp: 2;
-				    -webkit-box-orient: vertical;
+					font-size: 28rpx
+					margin-right 5rpx
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
 				.reason
 					position absolute
 					top 130rpx
 					color #fb9e60
 					font-size 24rpx
 					border 1rpx solid #fb9e60
+					border-radius 10rpx
 				.up
 					position absolute
 					top 164rpx
 					color #a1a1a1
 					font-size 28rpx
 				.playInfo
+					width 100%
 					position absolute
 					top 200rpx
 					color #a1a1a1
 					font-size 28rpx
 					text:nth-of-type(3)
 						margin-left 45rpx
+					text:nth-of-type(5)
+						position absolute
+						right 20rpx
+						color #000000
 				
 				
 </style>
